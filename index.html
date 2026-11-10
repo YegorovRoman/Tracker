@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <div class="header_container">
+            <p class="p_logo">В ПУТИ.</p>
+            <a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSz1Ot6zAzES7U5iz2rQEWqqI3VjRy3EcW9lsRc2EpXaxqfLCxZywP_bg&s=10">Отслеживание посылок</a>
+            <p>ПО НОМЕРУ</p>
+        </div>
+    </header>
+    <main>
+        <section class="tracker">
+            <div class="tracker_container">
+                <div class="tracker_text">
+                    <div class="tracker_text_title">
+                        <p>Где ваша посылка?</p>
+                    </div>
+                    <div class="tracker_text_subtitle">
+                        <p>Введите номер и узнайте, на каком она этапе.</p>
+                    </div>
+                </div>
+                <div class="tracker_main_content">
+                    <form id="form_tracker">
+                        <p class="p_tracker_number">Трек-номер</p>
+                        <input type="text" placeholder="Введите 6 цифр..." id="input_tracker">
+                        <p class="p_tracker_max_value">6 цифр из SMS или письма. Без букв и пробелов.</p>
+                        <button type="submit" id="button_tracker">Отследить</button>
+                        <p id="error"></p>
+                    </form>
+                </div>
+                <div class="tracker_status">
+                    <div class="tracker_status_title">
+                        <p>Весь путь посылки — в одном месте</p>
+                    </div>
+                    <div class="tracker_status_numbers">
+                        <div class="tracker_status_number" id="status-step-1">
+                            <p class="p_status_number">1</p>
+                            <p>Склад</p>
+                        </div>
+                        <div class="tracker_status_number" id="status-step-2">
+                            <p class="p_status_number">2</p>
+                            <p>В пути</p>
+                        </div>
+                        <div class="tracker_status_number" id="status-step-3">
+                            <p class="p_status_number">3</p>
+                            <p>Пункт выдачи</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer_container">
+            <p>От отправления до получения.</p>
+        </div>
+    </footer>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>

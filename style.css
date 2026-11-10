@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Inter-bold';
+    src: url('./fonts/Inter_18pt-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'Inter-regular';
+    src: url('./fonts/Inter_18pt-Regular.ttf');
+}
+
+body {
+    font-family: 'Inter-regular';
+    color: #5F5F5F;
+}
+
+a {
+    text-decoration: none;
+    color: #5F5F5F;
+}
+
+.header_container {
+    max-width: 1500px;
+    margin: 0 auto;
+    justify-content: space-between;
+    margin-top: 32px;
+    display: flex;
+    margin-bottom: 120px;
+}
+
+.p_logo {
+    color: #202020;
+    font-family: 'Inter-bold';
+    font-size: 24px;
+}
+
+.tracker_container {
+    max-width: 1500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+}
+
+.tracker_text {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.tracker_text_title {
+    font-size: 32px;
+    font-family: 'Inter-bold';
+    color: #202020;
+}
+
+form#form_tracker {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.p_tracker_number {
+    color: #202020;
+}
+
+.p_tracker_max_value {
+    font-size: 12px;
+}
+
+form#form_tracker input {
+    padding: 16px;
+    border-radius: 8px;
+    border: 1px solid #C5C5C5;
+    font-size: 20px;
+}
+
+form#form_tracker button {
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    font-family: 'Inter-bold';
+    color: white;
+    font-size: 16px;
+    background-color: #27B500;
+    cursor: pointer;
+}
+
+p#error {
+    font-size: 12px;
+    color: red;
+}
+
+.tracker_status_title {
+    text-align: center;
+}
+
+.tracker_status_numbers {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+    margin-bottom: 120px;
+}
+
+.tracker_status_number {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    flex: 1;
+    z-index: 1;
+}
+
+.tracker_status_number::before {
+    content: '';
+    position: absolute;
+    top: 25px;
+    left: 50%;
+    width: 100%;
+    height: 4px;
+    background-color: #C5C5C5;
+    z-index: -1;
+}
+
+/* Убираем линию после последнего элемента */
+.tracker_status_number:last-child::before {
+    display: none;
+}
+
+.p_status_number {
+    background-color: #C5C5C5;
+    padding: 14px 20px;
+    border-radius: 15px;
+    margin-bottom: 8px;
+    max-width: 50px;
+    position: relative;
+    background-color: #C5C5C5;
+    z-index: 2;
+}
+
+.tracker_status_number.active .p_status_number {
+    background-color: #27B500;
+    color: #FFFFFF;
+}
+
+.tracker_status_number.active>p:last-child {
+    color: #27B500;
+    font-family: 'Inter-bold';
+}
+
+.tracker_status_number.active::before {
+    background-color: #27B500;
+}
+
+.footer_container {
+    text-align: center;
+}
